@@ -1,12 +1,12 @@
 # aoe
 
-A GitHub Action that runs [opencode](https://opencode.ai) to assist with software engineering tasks directly in your repository.
+GitHub Action, который запускает [opencode](https://opencode.ai) для помощи с задачами разработки непосредственно в вашем репозитории.
 
-## Usage
+## Использование
 
-This action runs opencode when triggered by issue comments or PR review comments containing `/oc` or `/opencode`.
+Этот action запускается при комментариях к issues или PR review, содержащих `/oc` или `/opencode`.
 
-### Example Workflow
+### Пример workflow
 
 ```yaml
 name: opencode
@@ -44,25 +44,25 @@ jobs:
           model: opencode/minimax-m2.5-free
 ```
 
-## Configuration
+## Настройка
 
-### Required Secrets
+### Требуемые секреты
 
-- `OPENCODE_API_KEY`: Your opencode API key
+- `OPENCODE_API_KEY`: Ваш API-ключ opencode
 
-### Inputs
+### Параметры
 
-- `model`: The model to use (default: `opencode/minimax-m2.5-free`)
+- `model`: Модель для использования (по умолчанию: `opencode/minimax-m2.5-free`)
 
-## Triggering opencode
+## Запуск opencode
 
-Add a comment to an issue or PR with `/oc` followed by your request:
+Добавьте комментарий к issue или PR с `/oc` и вашим запросом:
 
 ```
 /oc Explain this code
 ```
 
-or
+или
 
 ```
 /opencode Write tests for this function
